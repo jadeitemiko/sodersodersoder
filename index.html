@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your guide to restaurants, bars, nightlife, and activities in Södermalm, Stockholm." />
+  <title>Södermalm Guide</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics: paste tracking code below -->
+  <!-- GA CODE HERE -->
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 id="site-title" data-lang="siteTitle">Södermalm Guide</h1>
+      <ul>
+        <li><a href="#eat" data-lang="eat">Eat</a></li>
+        <li><a href="#drink" data-lang="drink">Drink</a></li>
+        <li><a href="#do" data-lang="do">Do</a></li>
+        <li><a href="#events" data-lang="events">Events</a></li>
+        <li><a href="#plan" data-lang="plan">Plan</a></li>
+      </ul>
+      <div class="language-toggle">
+        <button onclick="setLanguage('sv')">SV</button>
+        <button onclick="setLanguage('en')">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- EAT SECTION -->
+    <section id="eat">
+      <h2 data-lang="eat">Eat</h2>
+      <p data-lang="eatIntro">Discover the best restaurants and cafés in Södermalm.</p>
+      <div class="read-more" data-lang="eatMore">
+        <p>Sample hidden gems, from vegan bistros to classic Swedish dining.</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
+
+      <!-- Native Ad Placeholder -->
+      <!-- Example: Featured Restaurant (sponsored) -->
+      <div class="ad-block">[Ad: Local restaurant here]</div>
+    </section>
+
+    <!-- DRINK SECTION -->
+    <section id="drink">
+      <h2 data-lang="drink">Drink</h2>
+      <p data-lang="drinkIntro">Bars, pubs, and late-night spots worth a visit.</p>
+      <div class="read-more" data-lang="drinkMore">
+        <p>From craft cocktails to cozy wine bars.</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
+
+      <!-- Native Ad Placeholder -->
+      <div class="ad-block">[Ad: Local bar here]</div>
+    </section>
+
+    <!-- DO SECTION -->
+    <section id="do">
+      <h2 data-lang="do">Do</h2>
+      <p data-lang="doIntro">Cultural experiences, shopping, and things to do.</p>
+      <div class="read-more" data-lang="doMore">
+        <p>Explore galleries, bookstores, and local design shops.</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events">
+      <h2 data-lang="events">Events</h2>
+      <p data-lang="eventsIntro">What’s happening tonight and this week in Södermalm.</p>
+    </section>
+
+    <!-- PLAN SECTION -->
+    <section id="plan">
+      <h2 data-lang="plan">Plan your day</h2>
+      <div id="map">[Interactive Map placeholder]</div>
+      <div id="weather">[Weather widget placeholder]</div>
+      <div id="distance">[Distance/time from Medborgarplatsen]</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Södermalm Guide</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
