@@ -28,75 +28,76 @@
     </nav>
   </header>
 
-  <main>
-    <!-- EAT SECTION -->
-    <section id="eat">
-      <h2 data-lang="eat">Eat</h2>
-      <p data-lang="eatIntro">Discover the best restaurants and cafés in Södermalm.</p>
-      <div class="read-more" data-lang="eatMore">
-        <p>Sample hidden gems, from vegan bistros to classic Swedish dining.</p>
-      </div>
-      <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
+<main>
+  <!-- EAT SECTION -->
+  <section id="eat">
+    <h2 data-lang="eat">Eat</h2>
+    <p data-lang="eatIntro">Discover the best restaurants and cafés in Södermalm.</p>
+    <img src="images/istockphoto-2163776298-612x612.jpg" alt="Aerial photo of Södermalm" class="section-photo" />
+    <div class="read-more" data-lang="eatMore">
+      <p>Sample hidden gems, from vegan bistros to classic Swedish dining.</p>
+    </div>
+    <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
 
-      <!-- Native Ad Placeholder -->
-      <!-- Example: Featured Restaurant (sponsored) -->
-      <div class="ad-block">[Ad: Local restaurant here]</div>
-    </section>
+    <!-- Native Ad Placeholder -->
+    <div class="ad-block">[Ad: Local restaurant here]</div>
+  </section>
 
-    <!-- DRINK SECTION -->
-    <section id="drink">
-      <h2 data-lang="drink">Drink</h2>
-      <p data-lang="drinkIntro">Bars, pubs, and late-night spots worth a visit.</p>
-      <div class="read-more" data-lang="drinkMore">
-        <p>From craft cocktails to cozy wine bars.</p>
-      </div>
-      <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
+  <!-- DRINK SECTION -->
+  <section id="drink">
+    <h2 data-lang="drink">Drink</h2>
+    <p data-lang="drinkIntro">Bars, pubs, and late-night spots worth a visit.</p>
+    <img src="images/sodermalms-basta-barer.jpg" alt="Bar in Södermalm" class="section-photo" />
+    <div class="read-more" data-lang="drinkMore">
+      <p>From craft cocktails to cozy wine bars.</p>
+      <img src="images/one-tap-1095eb90.jpg" alt="Söder dive bar" class="section-photo" />
+    </div>
+    <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
 
-      <!-- Native Ad Placeholder -->
-      <div class="ad-block">[Ad: Local bar here]</div>
-    </section>
+    <!-- Native Ad Placeholder -->
+    <div class="ad-block">[Ad: Local bar here]</div>
+  </section>
 
-    <!-- DO SECTION -->
-    <section id="do">
-      <h2 data-lang="do">Do</h2>
-      <p data-lang="doIntro">Cultural experiences, shopping, and things to do.</p>
-      <div class="read-more" data-lang="doMore">
-        <p>Explore galleries, bookstores, and local design shops.</p>
-      </div>
-      <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
-    </section>
+  <!-- DO SECTION -->
+  <section id="do">
+    <h2 data-lang="do">Do</h2>
+    <p data-lang="doIntro">Cultural experiences, shopping, and things to do.</p>
+    <img src="images/soderbokhandeln.webp" alt="Bookstore in Södermalm" class="section-photo" />
+    <div class="read-more" data-lang="doMore">
+      <p>Explore galleries, bookstores, and local design shops.</p>
+      <img src="images/8-sofo-quartier-lesley-williamson-1.jpg" alt="SoFo neighborhood street" class="section-photo" />
+    </div>
+    <button class="toggle-btn" onclick="toggleReadMore(this)" data-lang="readMore">Read more</button>
+  </section>
 
-    <!-- EVENTS SECTION -->
-    <section id="events">
-      <h2 data-lang="events">Events</h2>
-      <p data-lang="eventsIntro">What’s happening tonight and this week in Södermalm.</p>
-    </section>
+  <!-- PLAN SECTION -->
+  <section id="plan">
+    <h2 data-lang="plan">Plan your day</h2>
 
-    <!-- PLAN SECTION -->
-<section id="plan">
-  <h2 data-lang="plan">Plan your day</h2>
-      <!-- map content -->
-<div id="map">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19929.00302998757!2d18.0626!3d59.3154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d09c8b6c1c5%3A0x4e6d6ef6adcb8b0!2sS%C3%B6dermalm%2C%20Stockholm!5e0!3m2!1sen!2sse!4v1692982185394!5m2!1sen!2sse"
-    width="100%"
-    height="300"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+    <!-- Map -->
+    <div id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19929.00302998757!2d18.0626!3d59.3154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d09c8b6c1c5%3A0x4e6d6ef6adcb8b0!2sS%C3%B6dermalm%2C%20Stockholm!5e0!3m2!1sen!2sse!4v1692982185394!5m2!1sen!2sse"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
 
-  <!-- WeatherWidget embed -->
-  <div id="weather">
-    <!-- Replace below snippet with your widget from https://weatherwidget.io -->
-    <a class="weatherwidget-io" href="https://forecast7.com/en/59d33n18d07/stockholm/" data-label_1="STOCKHOLM" data-label_2="WEATHER" data-theme="pure">STOCKHOLM WEATHER</a>
-  </div>  
-  <div id="distance">[Distance/time from Medborgarplatsen]</div>
-</section>
+    <!-- Weather Widget -->
+    <div id="weather">
+      <a class="weatherwidget-io" href="https://forecast7.com/en/59d33n18d07/stockholm/" data-label_1="STOCKHOLM" data-label_2="WEATHER" data-theme="pure">STOCKHOLM WEATHER</a>
+    </div>  
 
-  </main>
+    <img src="images/katarina-bangata.webp" alt="Katarina Bangata evening aerial view" class="section-photo" />
+
+    <!-- Distance -->
+    <div id="distance">[Distance/time from Medborgarplatsen]</div>
+  </section>
+</main>
 
   <footer>
     <p>&copy; 2025 Södermalm Guide</p>
