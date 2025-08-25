@@ -67,10 +67,47 @@ function getDistanceFromMedborgarplatsen() {
 
   document.getElementById("distance").innerText =
     `You are about ${distance.toFixed(2)} km from Medborgarplatsen (straight line).`;
-}
+} 
+  if (typeof google === "undefined" || !google.maps) {
+    document.getElementById("distance").innerText =
+      "Google Maps API not loaded. Add your API key to enable distance/time calculation.";
+    return;
+  }
 
+  const service = new google.maps.DistanceMatrixService();
+  const origin = { lat: 59.3143, lng: 18.0734 }; // Medborgarplatsen
+
+  // Use user’s location
+  navigator.geolocation.getCurrentPosition(pos => {
+    const destination = {
+      lat: pos.coords.latitude,
+      lng: pos.coords.longitude
+    };
+
+    service.getDistanceMatrix(
+      {
+        origins: [origin],
+        destinations: [destination],
+        travelMode: 'WALKING'
+      },
+      (response, status) => {
+        if (status === 'OK') {
+          const result = response.rows[0].elements[0];
+          document.getElementById("distance").innerText =
+            `From Medborgarplatsen: ${result.distance.text}, ${result.duration.text} walking.`;
+        } else {
+          document.getElementById("distance").innerText = "Distance data unavailable.";
+        }
+      }
+    );
+  }, () => {
+    document.getElementById("distance").innerText = "Location access denied.";
+  });
+}
 // Call on load
 document.addEventListener("DOMContentLoaded", () => {
   setLanguage("en"); // default
-  getDistanceFromMedborgarplatsen();
+  getDistanceFromMedborgarplatsen(); // fallback (straight-line calc)
+  loadGoogleDistance(); // <-- uncomment once API key is ready
 });
+
